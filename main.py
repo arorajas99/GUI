@@ -25,11 +25,10 @@ def login():
     login_info = {'arorajas99': '4321', 'arorajap99': '1234', 'acbd': '7894', 'hackerboii': '5648'}
 
     def check():
-
-        if username.get() in login_info.keys():
+        if field.get() in list(login_info.keys()):
             print('True')
-            if password.get() == login_info[username.get()]:
-                print("HURRAYYY")
+            if field2.get() == login_info[field.get()]:
+                print("HURRAY")
             else:
                 print('Incorrect Password')
         else:
@@ -43,21 +42,19 @@ def login():
     label2 = tk.Label(win_login, text='Username')
     label2.pack()
 
-    field = tk.Entry(win_login, textvariable=username)
+    field = tk.Entry(win_login)
     field.pack()
 
     label3 = tk.Label(win_login, text='Password')
     label3.pack()
 
-    field2 = tk.Entry(win_login, textvariable=password)
+    field2 = tk.Entry(win_login)
     field2.pack()
 
     btn = tk.Button(win_login, text='Sign In', command=check)
     btn.pack()
 
     win_login.mainloop()
-
-
 
 
 
