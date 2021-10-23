@@ -1,6 +1,8 @@
 # ੧ਓ ਸਤਗੁਰੁ ਪ੍ਰਸਾਦ॥
 import tkinter as tk
 
+login_info = {'arorajas99': '4321', 'arorajap99': '1234', 'acbd': '7894', 'hackerboii': '5648'}
+
 
 def main():
     win = tk.Tk()
@@ -9,10 +11,10 @@ def main():
     win.minsize(500, 500)
     win.maxsize(500, 500)
     win.configure(bg='#F1BBB0')
-    btn1 = tk.Button(win, text='Sign In', bg='black', fg='white', font=('Courier 15 bold italic'), command=login)
+    btn1 = tk.Button(win, text='Sign In', bg='black', fg='white', font='Courier 15 bold italic', command=login)
     btn1.place(x=100, y=350)
 
-    btn2 = tk.Button(win, text='Sign Up', bg='red', font=('Courier 15 bold italic'))
+    btn2 = tk.Button(win, text='Sign Up', bg='red', font='Courier 15 bold italic', command=signup)
     btn2.place(x=300, y=350)
 
     win.mainloop()
@@ -22,7 +24,6 @@ def login():
     win_login = tk.Tk()
     username = tk.StringVar()
     password = tk.StringVar()
-    login_info = {'arorajas99': '4321', 'arorajap99': '1234', 'acbd': '7894', 'hackerboii': '5648'}
 
     def check():
         if field.get() in list(login_info.keys()):
@@ -56,6 +57,20 @@ def login():
 
     win_login.mainloop()
 
+
+def signup():
+    siup = tk.Tk()
+    siup.geometry('500x500')
+    label1 = tk.Label(siup, text='Enter your Email id')
+    label1.pack()
+    entry1 = tk.Entry(siup)
+    entry1.pack()
+    label2 = tk.Label(siup, text='Enter your password')
+    label2.pack()
+    entry2 = tk.Entry(siup)
+    entry2.pack()
+    button1 = tk.Button(siup, text='Sign UP')
+    button1.pack
 
 
 main()
