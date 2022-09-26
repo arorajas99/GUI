@@ -1,7 +1,7 @@
-# ੧ਓ ਸਤਗੁਰੁ ਪ੍ਰਸਾਦ॥
+
 import tkinter as tk
 
-login_info = {'arorajas99': '4321', 'arorajap99': '1234', 'acbd': '7894', 'hackerboii': '5648'}
+login_info = {'arorajas99': '4321', 'acbd': '7894', 'hackerboii': '5648'}
 
 
 def main():
